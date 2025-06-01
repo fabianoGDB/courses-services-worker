@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B1272C3E-8148-48F8-8AF8-C01A83A58171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.Worker", "src\Courses.StudentsGradesService.Worker\Courses.StudentsGradesService.Worker.csproj", "{95A47E2A-1930-4330-A441-3717A22C8525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95A47E2A-1930-4330-A441-3717A22C8525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A47E2A-1930-4330-A441-3717A22C8525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A47E2A-1930-4330-A441-3717A22C8525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A47E2A-1930-4330-A441-3717A22C8525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{95A47E2A-1930-4330-A441-3717A22C8525} = {B1272C3E-8148-48F8-8AF8-C01A83A58171}
+	EndGlobalSection
+EndGlobal
