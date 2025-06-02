@@ -8,7 +8,7 @@ namespace Courses.StudentsGradesService.Domain.Entities
 {
     public class User : Entity
     {
-        public User(string name, string identificationDocument, DateTime birthDate, bool isActive, string email, Phone phone, int isAdministrative)
+        public User(string name, string identificationDocument, DateTime birthDate, bool isActive, string email, Phone phone, int isAdministrative, DateTime createdAt)
         {
             Name = name;
             IdentificationDocument = identificationDocument;
@@ -17,6 +17,7 @@ namespace Courses.StudentsGradesService.Domain.Entities
             Email = email;
             Phone = phone;
             IsAdministrative = isAdministrative;
+            CreatedAt = createdAt;
         }
 
         protected User() { }
@@ -28,6 +29,9 @@ namespace Courses.StudentsGradesService.Domain.Entities
         public string Email { get; private set; }
         public Phone Phone { get; private set; }
         public int IsAdministrative { get; private set; }
+        public DateTime CreatedAt { get; private set; }
+        public Student Student { get; private set; }
+        public Teacher Teacher { get; private set; }
 
     }
 }

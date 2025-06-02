@@ -5,30 +5,27 @@ using System.Threading.Tasks;
 
 namespace Courses.StudentsGradesService.Domain.Entities
 {
-    public class Student : Entity
+    public class Teacher : Entity
     {
-        public Student(string abbreviatedName, string internEmail, int userId, DateTime createdAt)
+        public Teacher(string abbreviatedName, string internEmail, bool isTenuredTeacher, bool isSubstituteTeacher, int userId, DateTime createdAt)
         {
             AbbreviatedName = abbreviatedName;
             InternEmail = internEmail;
+            IsTenuredTeacher = isTenuredTeacher;
+            IsSubstituteTeacher = isSubstituteTeacher;
             UserId = userId;
             CreatedAt = createdAt;
-            Grades = new List<Grade>();
-            StudentClasses = new List<StudentClass>();
         }
 
-        protected Student() { }
+        protected Teacher() { }
+
         public string AbbreviatedName { get; private set; }
         public string InternEmail { get; private set; }
+        public bool IsTenuredTeacher { get; private set; }
+        public bool IsSubstituteTeacher { get; private set; }
         public int UserId { get; private set; }
         public DateTime CreatedAt { get; private set; }
-
-        public ICollection<Grade> Grades { get; private set; }
-        public ICollection<StudentClass> StudentClasses { get; private set; }
-
-        public void AddGrade(Grade grade)
-        {
-            Grades.Add(grade);
-        }
+        public User User { get; private set; }
+        public Subject Subject { get; private set; }
     }
 }
