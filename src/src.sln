@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.Application", "Courses.StudentsGradesService.Application\Courses.StudentsGradesService.Application.csproj", "{C110A39A-44BB-C8B6-F7D2-D5E8CD95CA34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.Data", "Courses.StudentsGradesService.Data\Courses.StudentsGradesService.Data.csproj", "{65BA84C5-C266-36F2-F141-CD4820B181BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.Domain", "Courses.StudentsGradesService.Domain\Courses.StudentsGradesService.Domain.csproj", "{0B736FF3-9501-43CE-2E4C-525A2E67B225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.IOC", "Courses.StudentsGradesService.IOC\Courses.StudentsGradesService.IOC.csproj", "{DDC81B2E-DBC8-86BA-38B2-16CC26B41C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.StudentsGradesService.Worker", "Courses.StudentsGradesService.Worker\Courses.StudentsGradesService.Worker.csproj", "{231BAE03-FF83-AF3F-07E5-376FCF771805}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C110A39A-44BB-C8B6-F7D2-D5E8CD95CA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C110A39A-44BB-C8B6-F7D2-D5E8CD95CA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C110A39A-44BB-C8B6-F7D2-D5E8CD95CA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C110A39A-44BB-C8B6-F7D2-D5E8CD95CA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BA84C5-C266-36F2-F141-CD4820B181BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BA84C5-C266-36F2-F141-CD4820B181BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BA84C5-C266-36F2-F141-CD4820B181BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BA84C5-C266-36F2-F141-CD4820B181BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B736FF3-9501-43CE-2E4C-525A2E67B225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B736FF3-9501-43CE-2E4C-525A2E67B225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B736FF3-9501-43CE-2E4C-525A2E67B225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B736FF3-9501-43CE-2E4C-525A2E67B225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC81B2E-DBC8-86BA-38B2-16CC26B41C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC81B2E-DBC8-86BA-38B2-16CC26B41C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC81B2E-DBC8-86BA-38B2-16CC26B41C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC81B2E-DBC8-86BA-38B2-16CC26B41C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231BAE03-FF83-AF3F-07E5-376FCF771805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231BAE03-FF83-AF3F-07E5-376FCF771805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231BAE03-FF83-AF3F-07E5-376FCF771805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231BAE03-FF83-AF3F-07E5-376FCF771805}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4472F7D3-AD1D-48F4-82F7-323669B127E8}
+	EndGlobalSection
+EndGlobal
