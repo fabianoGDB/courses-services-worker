@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Courses.StudentsGradesService.Domain.DomainObjects;
+using Courses.StudentsGradesService.Domain.Interfaces.Repositories;
+
+namespace Courses.StudentsGradesService.Data.Repositories
+{
+    public class SubjectRepository : ISubjectRepository
+    {
+        public IUnitOfWork UnitOfWork => throw new NotImplementedException();
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

@@ -7,12 +7,7 @@ using Courses.StudentsGradesService.Domain.Entities;
 
 namespace Courses.StudentsGradesService.Domain.Interfaces
 {
-    public interface IUserRpository : IRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
-        IUnitOfWork UnitOfWork => throw new NotImplementedException();
-        public void Dispose()
-        {
-
-        }
     }
 }
