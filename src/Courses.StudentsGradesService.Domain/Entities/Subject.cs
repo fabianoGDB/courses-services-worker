@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Courses.StudentsGradesService.Domain.DomainObjects;
 using Courses.StudentsGradesService.Domain.Enums;
 
 namespace Courses.StudentsGradesService.Domain.Entities
 {
-    public class Subject : Entity
+    public class Subject : Entity, IAggregateRoot
     {
         public Subject(string name, string description, DateTime startDate, DateTime endDate, SubjectType subjectType, int teacherId, DateTime createdAt)
         {

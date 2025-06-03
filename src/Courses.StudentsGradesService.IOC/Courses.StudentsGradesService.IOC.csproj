@@ -1,5 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Courses.StudentsGradesService.Domain\Courses.StudentsGradesService.Domain.csproj" />
+    <ProjectReference Include="..\Courses.StudentsGradesService.Data\Courses.StudentsGradesService.Data.csproj" />
+    <ProjectReference Include="..\Courses.StudentsGradesService.Application\Courses.StudentsGradesService.Application.csproj" />
+    <ProjectReference Include="..\Courses.StudentsGradesService.MessageBus\Courses.StudentsGradesService.MessageBus.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

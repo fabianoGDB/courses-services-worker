@@ -1,10 +1,10 @@
 namespace Courses.StudentsGradesService.Worker;
 
-public class Worker : BackgroundService
+public class GradeServiceWorker : BackgroundService
 {
-    private readonly ILogger<Worker> _logger;
+    private readonly ILogger<GradeServiceWorker> _logger;
 
-    public Worker(ILogger<Worker> logger)
+    public GradeServiceWorker(ILogger<GradeServiceWorker> logger)
     {
         _logger = logger;
     }

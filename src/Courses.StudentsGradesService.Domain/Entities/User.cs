@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Courses.StudentsGradesService.Domain.DomainObjects;
 using Courses.StudentsGradesService.Domain.ValueObjects;
 
 namespace Courses.StudentsGradesService.Domain.Entities
 {
-    public class User : Entity
+    public class User : Entity, IAggregateRoot
     {
         public User(string name, string identificationDocument, DateTime birthDate, bool isActive, string email, Phone phone, int isAdministrative, DateTime createdAt)
         {
