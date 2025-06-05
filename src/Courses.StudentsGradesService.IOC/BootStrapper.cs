@@ -8,6 +8,7 @@ using Courses.StudentsGradesService.Data.Repositories;
 using Courses.StudentsGradesService.Domain.Interfaces;
 using Courses.StudentsGradesService.Domain.Interfaces.Repositories;
 using Courses.StudentsGradesService.Domain.Interfaces.Services;
+using Courses.StudentsGradesService.Domain.Notification;
 using Courses.StudentsGradesService.Domain.Services;
 using Courses.StudentsGradesService.MessageBus.AWS.Client;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,8 @@ namespace Courses.StudentsGradesService.IOC
             RegisterServices(services);
             RegisterRepositories(services);
             RegisterDbContexts(services);
+            RegisterQueues(services);
+            RegisterNotificationContext(services);
             return services;
         }
 
@@ -45,5 +48,12 @@ namespace Courses.StudentsGradesService.IOC
         {
             services.AddScoped<IFakeStudentGradeSubmitClient, FakeStudentGradeSubmitClient>();
         }
+
+        private static void RegisterNotificationContext(IServiceCollection services)
+        {
+            services.AddScoped<ContextNotification>();
+        }
+
+
     }
 }

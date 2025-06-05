@@ -7,8 +7,9 @@ namespace Courses.StudentsGradesService.Domain.Entities
 {
     public class Teacher : Entity
     {
-        public Teacher(string abbreviatedName, string internEmail, bool isTenuredTeacher, bool isSubstituteTeacher, int userId, DateTime createdAt)
+        public Teacher(int id, string abbreviatedName, string internEmail, bool isTenuredTeacher, bool isSubstituteTeacher, int userId, DateTime createdAt)
         {
+            Id = id;
             AbbreviatedName = abbreviatedName;
             InternEmail = internEmail;
             IsTenuredTeacher = isTenuredTeacher;

@@ -8,8 +8,9 @@ namespace Courses.StudentsGradesService.Domain.Entities
 {
     public class Activity : Entity
     {
-        public Activity(string description, ActivityType activityType, DateTime activityDate, DateTime createdAt, bool hasRetake)
+        public Activity(int id, string description, ActivityType activityType, DateTime activityDate, DateTime createdAt, bool hasRetake)
         {
+            Id = id;
             Description = description;
             ActivityType = activityType;
             ActivityDate = activityDate;

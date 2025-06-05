@@ -27,5 +27,6 @@ namespace Courses.StudentsGradesService.Domain.Entities
 
         public ICollection<Activity> Activities { get; private set; }
 
+        public void AddActivity(Activity activity) => Activities.Add(activity);
     }
 }

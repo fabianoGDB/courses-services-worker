@@ -36,5 +36,7 @@ namespace Courses.StudentsGradesService.Domain.Entities
         public DateTime CreatedAt { get; private set; }
         public Teacher Teacher { get; private set; }
         public ICollection<Content> Contents { get; private set; }
+
+        public void AddContents(Content content) => Contents.Add(content);
     }
 }

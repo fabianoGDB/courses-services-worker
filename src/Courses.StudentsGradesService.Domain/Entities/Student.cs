@@ -7,8 +7,9 @@ namespace Courses.StudentsGradesService.Domain.Entities
 {
     public class Student : Entity
     {
-        public Student(string abbreviatedName, string internEmail, int userId, DateTime createdAt)
+        public Student(int id, string abbreviatedName, string internEmail, int userId, DateTime createdAt)
         {
+            Id = id;
             AbbreviatedName = abbreviatedName;
             InternEmail = internEmail;
             UserId = userId;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Courses.StudentsGradesService.Domain.Interfaces.DomainObjects;
+using Courses.StudentsGradesService.Domain.Validations;
 
 namespace Courses.StudentsGradesService.Domain.Messages
 {
@@ -22,7 +23,9 @@ namespace Courses.StudentsGradesService.Domain.Messages
 
         public override bool MessageIsValid()
         {
-            return base.MessageIsValid();
+            ValidationResult = RegisterStudentGradeValidation.Instance.Validate(this);
+
+            return ValidationResult.IsValid;
         }
     }
 }

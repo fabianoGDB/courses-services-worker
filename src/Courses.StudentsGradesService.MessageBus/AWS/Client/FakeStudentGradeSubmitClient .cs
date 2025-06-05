@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Courses.StudentsGradesService.Domain.Messages;
+using Courses.StudentsGradesService.Domain.Notification;
 using Courses.StudentsGradesService.MessageBus.Messages;
 
 namespace Courses.StudentsGradesService.MessageBus.AWS.Client
@@ -10,15 +11,28 @@ namespace Courses.StudentsGradesService.MessageBus.AWS.Client
     public class FakeStudentGradeSubmitClient : SqsClient<RegisterStudentGrade>, IFakeStudentGradeSubmitClient
     {
         private readonly Queue<QueueMessage<RegisterStudentGrade>> _messagesToRegister;
+        private readonly ContextNotification _contextNotification;
 
-        public FakeStudentGradeSubmitClient()
+        public FakeStudentGradeSubmitClient(ContextNotification contextNotification)
         {
             _messagesToRegister = GetMessagesToProcess();
+            _contextNotification = contextNotification;
         }
 
         public override async Task<QueueMessage<RegisterStudentGrade>> GetMessageAsync()
         {
-            return await Task.FromResult(_messagesToRegister.Dequeue());
+            QueueMessage<RegisterStudentGrade> message = null;
+            try
+            {
+                message = await Task.FromResult(_messagesToRegister.Dequeue());
+            }
+            catch (Exception ex)
+            {
+                _contextNotification.Add(ex.Message);
+            }
+
+            return message;
+
         }
 
         private Queue<QueueMessage<RegisterStudentGrade>> GetMessagesToProcess()
@@ -32,7 +46,7 @@ namespace Courses.StudentsGradesService.MessageBus.AWS.Client
                  MessageId = Guid.NewGuid().ToString(),
                  MessageHandle = Guid.NewGuid().ToString(),
                  ReceiveCount = 0,
-                 Message = new RegisterStudentGrade
+                 MessageBody = new RegisterStudentGrade
                  {
                      StudentId = 1234,
                      ActivityId = 34545,
