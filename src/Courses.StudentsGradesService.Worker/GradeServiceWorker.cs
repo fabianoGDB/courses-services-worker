@@ -1,7 +1,9 @@
+using System.Reflection.Metadata;
 using Courses.StudentsGradesService.Application.Interfaces;
 using Courses.StudentsGradesService.Domain.Notification;
 using Courses.StudentsGradesService.Domain.Services;
 using Courses.StudentsGradesService.MessageBus.AWS.Client;
+using static Courses.StudentsGradesService.Domain.Utils.Constants;
 
 namespace Courses.StudentsGradesService.Worker;
 
@@ -20,7 +22,7 @@ public class GradeServiceWorker : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            _logger.LogInformation("Starting the student garde service");
+            _logger.LogInformation(ApplicationsMessages.STARTING_SERVICE);
             using var scope = _serviceScopeFactory.CreateScope();
             var studentGradeServiceApp = scope.ServiceProvider.GetService<IStudentGradeApplicationService>();
             var messageClient = scope.ServiceProvider.GetService<IFakeStudentGradeSubmitClient>();
@@ -36,7 +38,7 @@ public class GradeServiceWorker : BackgroundService
 
             if (message is null)
             {
-                _logger.LogInformation("Queue dont have messages to be precessed...");
+                _logger.LogInformation(ApplicationsMessages.NO_MESSAGES_IN_QUEUE);
                 continue;
             }
 

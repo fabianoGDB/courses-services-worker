@@ -9,5 +9,7 @@ namespace Courses.StudentsGradesService.Domain.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {
+        Task<Student> FindStudentById(int id);
+        Task<Teacher> FindTeacherById(int id);
     }
 }

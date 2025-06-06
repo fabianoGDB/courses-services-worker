@@ -6,7 +6,7 @@ using Courses.StudentsGradesService.Domain.DomainObjects;
 using Courses.StudentsGradesService.Domain.Entities;
 using Courses.StudentsGradesService.Domain.Enums;
 
-namespace Courses.StudentsGradesService.MessageBus.AWS.Context
+namespace Courses.StudentsGradesService.Data.Context
 {
     public class FakeDbContext : IDisposable, IUnitOfWork
     {

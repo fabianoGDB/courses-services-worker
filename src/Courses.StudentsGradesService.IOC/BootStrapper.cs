@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Courses.StudentsGradesService.Application.Interfaces;
 using Courses.StudentsGradesService.Application.Services;
+using Courses.StudentsGradesService.Data.Context;
 using Courses.StudentsGradesService.Data.Repositories;
 using Courses.StudentsGradesService.Domain.Interfaces;
 using Courses.StudentsGradesService.Domain.Interfaces.Repositories;
@@ -31,11 +32,12 @@ namespace Courses.StudentsGradesService.IOC
         {
             services.AddScoped<IStudentGradeApplicationService, StudentGradeApplicationService>();
             services.AddScoped<IStudentGradeService, StudentGradeService>();
+            services.AddScoped<IStudentGradeValidationService, StudentGradeValidationService>();
         }
 
         private static void RegisterDbContexts(IServiceCollection services)
         {
-            //services.AddScoped<>();
+            services.AddScoped<FakeDbContext>();
         }
 
         private static void RegisterRepositories(IServiceCollection services)

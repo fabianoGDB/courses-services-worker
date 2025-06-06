@@ -9,6 +9,6 @@ namespace Courses.StudentsGradesService.Domain.Interfaces.Repositories
 {
     public interface ISubjectRepository : IRepository<Subject>
     {
-
+        Task<Subject> FindSubjectByAtivityId(int activityId);
     }
 }
