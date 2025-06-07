@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Courses.StudentsGradesService.Domain.Entities
 {
-    public class Teacher : Entity
+    public class Teacher : User
     {
         public Teacher(int id, string abbreviatedName, string internEmail, bool isTenuredTeacher, bool isSubstituteTeacher, int userId, DateTime createdAt)
         {

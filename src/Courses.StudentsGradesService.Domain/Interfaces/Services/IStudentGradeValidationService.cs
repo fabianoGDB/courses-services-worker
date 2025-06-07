@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Courses.StudentsGradesService.Domain.Entities;
+using Courses.StudentsGradesService.Domain.Handlers.Request;
 
 namespace Courses.StudentsGradesService.Domain.Interfaces.Services
 {
     public interface IStudentGradeValidationService
     {
-        Task ValidateSubmit(Student student, Teacher teacher, Subject subject);
+        void ValidateSubmission(Student student, Teacher teacher, Subject subject);
+        void ValidateSubmission(StudentGradeValidationRequest request);
     }
 }
